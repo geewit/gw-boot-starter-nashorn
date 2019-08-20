@@ -1,6 +1,6 @@
 package io.geewit.spring.boot.autoconfigure.nashorn.service;
 
-import io.geewit.core.exception.CustomizedException;
+import io.geewit.core.exception.ProcessedException;
 import jdk.nashorn.api.scripting.NashornScriptEngine;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,7 +34,7 @@ public class ScriptEvalService {
             return propertyResolver.getProperty(result.toString(), clazz);
         } catch (ScriptException e) {
             logger.warn(e.getMessage(), e);
-            throw new CustomizedException(e.getMessage());
+            throw new ProcessedException(e.getMessage());
         }
     }
 
@@ -52,7 +52,7 @@ public class ScriptEvalService {
             return null;
         } catch (ScriptException | NoSuchMethodException e) {
             logger.warn(e.getMessage(), e);
-            throw new CustomizedException(e.getMessage());
+            throw new ProcessedException(e.getMessage());
         }
     }
 
@@ -66,7 +66,7 @@ public class ScriptEvalService {
             return null;
         } catch (ScriptException | NoSuchMethodException e) {
             logger.warn(e.getMessage(), e);
-            throw new CustomizedException(e.getMessage());
+            throw new ProcessedException(e.getMessage());
         }
     }
 }

@@ -5,7 +5,8 @@ dependencies {
     compile("org.slf4j:slf4j-api:$slf4j_version") {
         exclude group: 'org.slf4j', module: 'logback'
     }
-    compile("io.geewit.core:gw-core-utils:$gw_core_utils_version")
+//    compile("io.geewit.core:gw-core-utils:$gw_core_utils_version")
+    compile("io.geewit.core:gw-core-exception:$gw_core_exception_version")
     compile("org.springframework.boot:spring-boot-autoconfigure:$spring_boot_version")
     compile("org.springframework.boot:spring-boot-configuration-processor:$spring_boot_version")
 }
